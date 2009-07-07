@@ -16,26 +16,28 @@ random numbers. Crypt::ISAAC is suitable for either purpose.
 Requirements
 ------------
 
-  * Ruby 1.8 (should also run on 1.6.x)
+  * Ruby 1.6
+  * Ruby 1.8
+  * Ruby 1.9
 
 
 Install
 -------
 
-  If you have never installed Crypt::ISAAC, you may run the testsuite to confirm that it works with:
+If you have never installed Crypt::ISAAC, you may run the testsuite to confirm that it works with:
 
-    # rake test
+  # rake test
 
 
 Usage
 -----
 
-require 'crypt/ISAAC'
+  require 'crypt-isaac'
 
-rng = Crypt::ISAAC.new
+  rng = Crypt::ISAAC.new
 
-r1 = rng.rand() # returns a floating point between 0 and 1
-r2 = rnd.rand(1000) # returns an integer between 0 and 999
+  r1 = rng.rand() # returns a floating point between 0 and 1
+  r2 = rng.rand(1000) # returns an integer between 0 and 999
 
 rand() should work identically to the Kernel.rand().
 
