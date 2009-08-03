@@ -6,29 +6,27 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["beawesomeinstead"]
-  s.date = %q{2009-07-07}
+  s.date = %q{2009-08-03}
   s.email = %q{beawesomeinstead@yahoo.com}
   s.extra_rdoc_files = [
-    "LICENSE",
-     "README.rdoc"
+    "README.markdown"
   ]
   s.files = [
     ".gitignore",
-     "LICENSE",
-     "README.rdoc",
+     "README.markdown",
      "VERSION",
      "crypt-isaac.gemspec",
      "lib/crypt-isaac.rb",
+     "lib/crypt-isaac/crypt-isaac.rb",
      "rakefile",
      "test/crypt-isaac_test.rb",
      "test/test_helper.rb"
   ]
-  s.has_rdoc = true
   s.homepage = %q{http://github.com/bai/crypt-isaac}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.2}
-  s.summary = %q{Ruby implementation of the ISAAC PRNG}
+  s.rubygems_version = %q{1.3.5}
+  s.summary = %q{Pure-Ruby implementation of the ISAAC PRNG.}
   s.test_files = [
     "test/crypt-isaac_test.rb",
      "test/test_helper.rb"
