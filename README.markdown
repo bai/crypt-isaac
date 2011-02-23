@@ -34,4 +34,4 @@ Enjoy it. Let me know if you find anything that can be improved or that needs to
 
 ## License
 
-The Crypt::ISAAC library is licensed with an MIT style licence. See the LICENSE file for details. As for the ISAAC algorithm itself, see: http://burtleburtle.net/bob/rand/isaac.html
+The Crypt::ISAAC library is licensed with an MIT style licence. As for the ISAAC algorithm itself, see: http://burtleburtle.net/bob/rand/isaac.html

@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'helper'
 
 class CryptIsaacTest < Test::Unit::TestCase
   context "The Crypt:ISAAC object" do
