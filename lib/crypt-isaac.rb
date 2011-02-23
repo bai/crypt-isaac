@@ -1,20 +1,25 @@
 module Crypt
-  # ISAAC is a fast, strong random number generator. Details on the algorithm can be found
-  # here: http://burtleburtle.net/bob/rand/isaac.html
-  # This provides a consistent and capable algorithm for producing independent streams of quality random numbers.
+  # ISAAC is a fast, strong random number generator. Details on the algorithm
+  # can be found here: http://burtleburtle.net/bob/rand/isaac.html This
+  # provides a consistent and capable algorithm for producing independent
+  # streams of quality random numbers.
   class ISAAC
     attr_accessor :randrsl, :randcnt
     attr_accessor :mm, :aa, :bb, :cc
 
-    # When a Crypt::ISAAC object is created, it needs to be seeded for random number generation. If the system has a
-    # /dev/urandom file, that will be used to do the seeding by default. If false is explictly passed when creating the
-    # object, it will instead use /dev/random to generate its seeds. Be warned that this may make for SLOW
-    # initialization. If the requested source (/dev/urandom or /dev/random) do not exist, the system will fall back to
-    # a simplistic initialization mechanism using the builtin Mersenne Twister PRNG.
+    # When a Crypt::ISAAC object is created, it needs to be seeded for random
+    # number generation. If the system has a /dev/urandom file, that will be
+    # used to do the seeding by default. If false is explictly passed when
+    # creating the object, it will instead use /dev/random to generate its
+    # seeds. Be warned that this may make for SLOW initialization. If the
+    # requested source (/dev/urandom or /dev/random) do not exist, the system
+    # will fall back to a simplistic initialization mechanism using the
+    # builtin Mersenne Twister PRNG.
     def initialize(noblock = true)
       @mm = []
       @randrsl = []
-      # Best initialization of the generator would be by pulling numbers from /dev/random.
+      # Best initialization of the generator would be by pulling numbers from
+      # /dev/random.
       rnd_source = noblock ? '/dev/urandom' : '/dev/random'
       if (FileTest.exist? rnd_source)
         File.open(rnd_source,'r') do |r|
@@ -25,7 +30,8 @@ module Crypt
           end
         end
       else
-        # If urandom isn't available, the standard Ruby PRNG makes an adequate fallback.
+        # If urandom isn't available, the standard Ruby PRNG makes an adequate
+        # fallback.
         256.times do |t|
           @randrsl[t] = Kernel.rand(4294967295)
         end
@@ -34,9 +40,10 @@ module Crypt
       nil
     end
 
-    # Works just like the standard rand() function. If called with an integer argument, rand() will return positive
-    # random number in the range of 0 to (argument - 1). If called without an integer argument, rand() returns a
-    # positive floating point number less than 1.
+    # Works just like the standard rand() function. If called with an integer
+    # argument, rand() will return positive random number in the range of 0 to
+    # (argument - 1). If called without an integer argument, rand() returns
+    # a positive floating point number less than 1.
     def rand(*num)
       if (@randcnt == 1)
         isaac

@@ -13,14 +13,29 @@ Gem::Specification.new do |s|
   s.description = %q{Pure-Ruby implementation of the ISAAC CSPRNG}
   s.email = %q{graf.otodrakula@gmail.com}
   s.extra_rdoc_files = [
-    "LICENSE.txt",
     "README.markdown"
+  ]
+  s.files = [
+    ".document",
+    "Gemfile",
+    "Gemfile.lock",
+    "README.markdown",
+    "Rakefile",
+    "VERSION",
+    "crypt-isaac.gemspec",
+    "lib/crypt-isaac.rb",
+    "test/crypt-isaac_test.rb",
+    "test/helper.rb"
   ]
   s.homepage = %q{http://github.com/bai/crypt-isaac}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.5.2}
   s.summary = %q{Pure-Ruby implementation of the ISAAC CSPRNG}
+  s.test_files = [
+    "test/crypt-isaac_test.rb",
+    "test/helper.rb"
+  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
