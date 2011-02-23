@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.license = "MIT"
   gem.summary = %Q{Pure-Ruby implementation of the ISAAC CSPRNG}
   gem.description = %Q{Pure-Ruby implementation of the ISAAC CSPRNG}
-  gem.email = "graf.otodrakula@gmail.com"
+  gem.email = "beawesomeinstead@yahoo.com"
   gem.authors = ["beawesomeinstead"]
 end
 Jeweler::RubygemsDotOrgTasks.new
