@@ -158,8 +158,8 @@ module Crypt
         end
       end
 
-      isaac()
-       @randcnt=256;        # /* prepare to use the first set of results */
+      isaac
+      @randcnt = 256  # prepare to use the first set of results
     end
   end
 end
