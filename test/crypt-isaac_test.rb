@@ -1,4 +1,4 @@
-require 'helper'
+require './test/test_helper'
 
 class CryptIsaacTest < Test::Unit::TestCase
   context "The Crypt:ISAAC object" do
