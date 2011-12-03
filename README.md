@@ -16,7 +16,6 @@ streams of random numbers. Crypt::ISAAC is suitable for either purpose.
 
 ## Requirements
 
-  * Ruby 1.6
   * Ruby 1.8
   * Ruby 1.9
 
@@ -26,7 +25,8 @@ streams of random numbers. Crypt::ISAAC is suitable for either purpose.
 If you have never installed Crypt::ISAAC, you may run the test suite to
 confirm that it works with:
 
-    ~$ rake test
+    ~$ bundle install
+    ~$ bundle exec rake
 
 
 ## Usage
