@@ -1,4 +1,4 @@
-# ISAAC ![Build status](http://travis-ci.org/bai/crypt-isaac.png)
+# ISAAC [![Build Status](https://secure.travis-ci.org/bai/crypt-isaac.png)](http://travis-ci.org/bai/crypt-isaac)
 
 ISAAC is a cryptographically secure PRNG for generating high quality random
 numbers. Detailed information about the algorithm can be found at:
