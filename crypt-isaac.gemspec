@@ -18,6 +18,5 @@ Gem::Specification.new do |s|
   s.rubyforge_project = '[none]'
 
   s.add_development_dependency('shoulda-context', ['>= 0'])
-  s.add_development_dependency('rcov', ['>= 0'])
   s.add_development_dependency('rake', ['>= 0'])
 end
